@@ -1,16 +1,136 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Resume App</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iskandar Nuhu | Cloud & DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
 <body>
-  <main class="container">
-    <h1>Iskandar Nuhu</h1>
-    <p>Cloud / DevOps Engineer</p>
-    <p>This resume app will be deployed to AWS Elastic Beanstalk using the PHP platform.</p>
+  <header class="navbar">
+    <div class="logo">WELCOME<span></span></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home" class="hero">
+    <section class="hero-text">
+      <p class="eyebrow">Cloud • DevOps • AWS • Automation</p>
+      <h1>Iskandar Nuhu</h1>
+      <h2>Cloud & DevOps Engineer</h2>
+      <p class="summary">
+        Building AWS deployment projects with GitHub Actions,
+        Docker, Amazon ECR, ECS on EC2, S3, CloudFront, Elastic Beanstalk,
+        and secure OIDC authentication.
+      </p>
+
+      <div class="badges">
+        <span>AWS</span>
+        <span>GitHub Actions</span>
+        <span>Docker</span>
+        <span>ECS on EC2</span>
+        <span>S3 + CloudFront</span>
+        <span>OIDC</span>
+      </div>
+
+      <div class="buttons">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      </div>
+    </section>
+
+    <section class="hero-card">
+      <div class="card">
+        <h3>Deployment Highlights</h3>
+        <div class="stats">
+          <div>
+            <strong>EC2</strong>
+            <span>App deployed with GitHub Actions</span>
+          </div>
+          <div>
+            <strong>ECR + ECS</strong>
+            <span>Containerized deployment on EC2</span>
+          </div>
+          <div>
+            <strong>S3 + CloudFront</strong>
+            <span>Static hosting with CDN delivery</span>
+          </div>
+          <div>
+            <strong>OIDC</strong>
+            <span>Short-lived AWS authentication</span>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      Cloud and DevOps engineer with a strong focus on deployment automation,
+      container orchestration and AWS services. This portfolio project demonstrates
+      end-to-end CI/CD delivery using GitHub Actions.
+    </p>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Core Skills</h2>
+    <div class="grid">
+      <div class="panel">AWS EC2</div>
+      <div class="panel">Amazon ECR</div>
+      <div class="panel">Amazon ECS</div>
+      <div class="panel">S3 + CloudFront</div>
+      <div class="panel">Elastic Beanstalk</div>
+      <div class="panel">GitHub Actions</div>
+      <div class="panel">Docker</div>
+      <div class="panel">OIDC Federation</div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Bootcamp Project Scope</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>EC2 Deployment</h3>
+        <p>Deployed a simple web app to EC2 using SSH-based GitHub Actions automation.</p>
+      </div>
+      <div class="project">
+        <h3>ECR to ECS on EC2</h3>
+        <p>Dockerized the app, pushed it to Amazon ECR, and deployed it to ECS using EC2 launch type.</p>
+      </div>
+      <div class="project">
+        <h3>S3 + CloudFront</h3>
+        <p>Configured static deployment workflow for global content delivery.</p>
+      </div>
+      <div class="project">
+        <h3>Elastic Beanstalk</h3>
+        <p>Prepared a separate resume application for deployment on the PHP platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Email: nuhu.iskandar1@gmail.com</p>
+    <p>GitHub: github.com/iskandar172nuhu</p>
+    <p>LinkedIn: linkedin.com/in/iskandar-nuhu-66497b290/</p>
+  </section>
 </body>
 </html>
